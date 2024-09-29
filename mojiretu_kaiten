@@ -1,0 +1,20 @@
+s_1 = "baaab"
+s_2 = "aabba"
+
+'''最初の文字列を1回転する前に（文字列の長さー１回、最後の文字を
+   先頭に移動する）二つ目の文字列と一致するか判定するプログラム'''
+
+ans = False
+
+for _ in range(len(s_1) - 1):
+    last_c = s_1[-1]
+    s_1 = s_1[:-1]
+    s_1 = last_c + s_1
+    if s_1 == s_2:
+        ans = True
+        break
+
+if ans:
+    print("OK")
+else:
+    print("NG")
